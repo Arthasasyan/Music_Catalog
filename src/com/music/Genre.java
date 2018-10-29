@@ -44,4 +44,12 @@ public class Genre {
     return name;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if(obj==null || this.getClass()!=obj.getClass())
+    {
+      return false;
+    }
+    return this.name == ((Genre)obj).name;
+  }
 }
